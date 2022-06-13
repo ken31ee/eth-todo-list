@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "@typechain/truffle-v5": "^8.0.1",
+    "truffle": "^5.5.18",
+    "ts-node": "^10.8.1",
+    "typechain": "^8.1.0",
+    "typescript": "^4.7.3"
+  },
+  "scripts": {
+    "generate-types": "npx typechain --target=truffle-v5 'client/src/contracts/*.json' --out-dir='client/src/types'",
+    "postinstall": "npx truffle compile && npm run generate-types"
+  }
+}
